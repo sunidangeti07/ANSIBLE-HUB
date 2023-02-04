@@ -2,7 +2,7 @@ install Nopcommerce on ubuntu
 ------------------------------
 * [refer here](https://docs.nopcommerce.com/en/installation-and-upgrading/installing-nop
 commerce/installing-on-linux.html)
-```
+
 * nopCommerce is an open source eCommerce software that contains both a catalog 
   frontend and an administration tool backend.
 * NopCommerce is an open-source e-commerce platform written in ASP.NET Core. It provides
@@ -11,7 +11,7 @@ commerce/installing-on-linux.html)
  and more.
 * Before installing .NET Core, we'll need to register the Microsoft key and install the
  required dependencies. This needs to be done once per machine.
- ```
+```
 wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb 
 -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
