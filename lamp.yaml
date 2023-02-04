@@ -23,5 +23,5 @@
     - name: ensure the apache service is running and enabled
       ansible.builtin.systemd:
         name: apache2
-        enabled: no
+        enabled: yes
         state: started
