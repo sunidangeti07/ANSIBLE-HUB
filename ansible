@@ -1,0 +1,28 @@
+---
+- name: install apache on ubuntu
+  hosts: all
+  become: yes
+  tasks:
+    - name: install apache2
+      ansible.builtin.apt:
+        name: apache2
+        update_cache: yes
+        state: present
+    - name: install php
+      ansible.builtin.apt:
+        name: 
+          - php
+          - libapache2-mod-php
+          - php-mysql
+        state: present
+    - name: creating a file
+      ansible.builtin.file:
+         path: /var/www/html/info.php
+         state: touch
+    - name: coping the files
+      ansible.builtin.copy:    
+        destination: /var/www/html/info.php
+        contant:
+          <?php
+             phpinfo();
+          ?>   
