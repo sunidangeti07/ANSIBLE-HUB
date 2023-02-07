@@ -20,7 +20,7 @@ Install the .NET Core Runtime
 ------------------------------
 ```
 sudo apt-get update
-sudo apt-get install -y apt-transport-https aspnetcore-runtime-7.0
+sudo apt-get install -y apt-transport-https 
 ```
 * You can see all installed .Net Core runtimes by the following command:
 ```
