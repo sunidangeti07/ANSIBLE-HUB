@@ -11,8 +11,8 @@
         update_cache: yes
         present: yes
       notify:
-        - print my message  
+        - installed java  
   handlers:
-    - name: print my message
+    - name: installed java
       ansible.builtin.debug:
         msg: installing java      
