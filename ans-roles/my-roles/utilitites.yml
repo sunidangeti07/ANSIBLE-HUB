@@ -13,7 +13,7 @@
         update_cache: yes
         state: present
       notify:
-        printmy msg
+        - printmy msg
   handlers:
     - name: printmy msg
       ansible.builtin.debug:
