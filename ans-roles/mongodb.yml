@@ -2,5 +2,5 @@
 - name: istall mongodb 
   hosts: all
   roles:
-    - role: iquzart.mongodb
+    - role: joseenrique.mongodb
       become: yes
