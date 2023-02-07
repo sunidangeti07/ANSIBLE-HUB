@@ -9,7 +9,7 @@
       ansible.builtin.apt:
         name: "{{ java_packege }}"
         update_cache: yes
-        present: yes
+        present: present
       notify:
         - installed java  
   handlers:
