@@ -1,0 +1,6 @@
+--- 
+- name: istall mongodb 
+  hosts: all
+  tasks:
+    - name: undergreen.mongodb
+      become: yes
