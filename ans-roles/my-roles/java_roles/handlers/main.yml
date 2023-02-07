@@ -1,0 +1,5 @@
+---
+# handlers file for khaja
+- name: installed java
+  ansible.builtin.debug:
+    var: java is installed
