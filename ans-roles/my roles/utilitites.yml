@@ -1,0 +1,20 @@
+---
+- name: install utilites
+  hosts: all
+  become: yes
+  vars:
+    - nano
+    - tree 
+    - git
+  tasks:
+    - name: install utilites
+      ansible.builtin.apt:
+        name: "{ item }"
+        update_cache: yes
+        state: present
+      notify:
+        printmy msg
+  handlers:
+    - name: printmy msg
+      ansible.builtin.debug:
+        msg: instaling varibles      
