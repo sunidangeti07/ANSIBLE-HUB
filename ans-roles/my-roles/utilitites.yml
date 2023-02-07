@@ -3,9 +3,10 @@
   hosts: all
   become: yes
   vars:
-    - nano
-    - tree 
-    - git
+    utils:
+      - nano
+      - tree 
+      - git
   tasks:
     - name: install utilites
       ansible.builtin.apt:
