@@ -2,5 +2,5 @@
 - name: istall mongodb 
   hosts: all
   roles:
-    - role: joseenrique.mongodb
+    - role: kevincoakley.ansible-role-mongodb
       become: yes
