@@ -15,4 +15,4 @@
   handlers:
     - name: installed java
       ansible.builtin.debug:
-        var: installing java      
+        var: java is installed      
