@@ -1,2 +1,6 @@
 ---
 # vars file for khaja
+utils:
+  - nano
+  - tree 
+  - git

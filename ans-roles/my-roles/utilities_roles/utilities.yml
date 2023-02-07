@@ -1,0 +1,6 @@
+---
+- name: installing utilities
+  host: all
+  become: yes
+  roles:
+    role: utilities_roles

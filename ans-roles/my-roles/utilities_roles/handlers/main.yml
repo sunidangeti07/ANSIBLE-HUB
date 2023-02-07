@@ -1,2 +1,5 @@
 ---
 # handlers file for khaja
+- name: printmy msg
+  ansible.builtin.debug:
+    msg: instaling varibles      
