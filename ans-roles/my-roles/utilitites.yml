@@ -10,7 +10,7 @@
   tasks:
     - name: install utilites
       ansible.builtin.apt:
-        name: "{{ item }}"
+        name: "{{ utils }}"
         update_cache: yes
         state: present
       notify:
