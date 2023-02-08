@@ -11,6 +11,10 @@
       ansible.builtin.dpkg_selections:
         name: packages-microsoft-prod.deb
         selection: install
+    - name: delete packages
+      ansible.builtin.apt:
+        name: packages-microsoft-prod.deb
+        state: absent  
     - name: istalling aspcore-sdk-7.0
       ansible.builtin.apt:
         name: dotnet-sdk-7.0
