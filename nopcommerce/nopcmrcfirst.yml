@@ -8,11 +8,13 @@
         deb: https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
     - name: install dotnet core dotnet-runtime
       ansible.builtin.apt:
+        update_cache: yes
         pkg: 
           - apt-transport-https
           - aspnetcore-runtime-7.0
           - nginx
           - unzip
+        state: present  
     - name: start nginx service
       ansible.builtin.systemd:
         name: nginx
