@@ -13,7 +13,6 @@ rm packages-microsoft-prod.deb
 install the dotnet sdk
 ----------------------
 ```
-
 sudo apt-get update 
 sudo apt-get install -y dotnet-sdk-7.0
 ```

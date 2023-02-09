@@ -1,7 +1,6 @@
 install Nopcommerce on ubuntu
 ------------------------------
-* [refer here](https://docs.nopcommerce.com/en/installation-and-upgrading/installing-nop
-commerce/installing-on-linux.html)
+* [refer here](https://docs.nopcommerce.com/en/installation-and-upgrading/installing-nopcommerce/installing-on-linux.html)
 
 * nopCommerce is an open source eCommerce software that contains both a catalog 
   frontend and an administration tool backend.
@@ -16,12 +15,16 @@ wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.
 -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
+
 Install the .NET Core Runtime
 ------------------------------
 ```
+
 sudo apt-get update
-sudo apt-get install -y apt-transport-https 
+
+sudo apt-get install -y apt-transport-https aspnetcore-runtime-7.0
 ```
+
 * You can see all installed .Net Core runtimes by the following command:
 ```
 dotnet --list-runtimes
@@ -34,6 +37,7 @@ sudo systemctl start nginx
 sudo systemctl status nginx
 sudo vi /etc/nginx/sites-available/default
 ```
+
 * To configure nginx as a reverse proxy to forward requests to your ASP.NET Core app, 
 modify /etc/nginx/sites-available/default. 
 
