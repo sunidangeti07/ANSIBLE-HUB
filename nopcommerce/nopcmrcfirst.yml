@@ -19,7 +19,7 @@
       ansible.builtin.systemd:
         name: nginx
         state: started
-    - name: copy the ansible file
+    - name: copy the default file
       ansible.builtin.copy:
         src: nop-default
         dest: /etc/nginx/sites-available/default 
@@ -28,29 +28,19 @@
         path: /var/www/nopCommerce
         state: touch
         mode: '0777'  
-    - name: dowmload the nopCommerce
-      ansible.builtin.get_url:
-        url: https://github.com/nopSolutions/nopCommerce/releases/download/release-4.60.2/nopCommerce_4.60.2_NoSource_linux_x64.zip
-        dest: /home/sai
-        mode: '0777'
     - name: unarchive the nopCommerce file
       ansible.builtin.unarchive:
-        src: nopCommerce_4.60.2_NoSource_linux_x64.zip
+        src: https://github.com/nopSolutions/nopCommerce/releases/download/release-4.60.2/nopCommerce_4.60.2_NoSource_linux_x64.zip
         dest: /home/sai
         remote_src: yes
-    - name: create two files
+    - name: create bin files
       ansible.builtin.file:
         path: /var/www/nopCommerce/bin
         state: touch
         mode: '0777'
-    - name: create two files
+    - name: create logs files
       ansible.builtin.file:
         path: /var/www/nopCommerce/logs
-        state: touch
-        mode: '0777'     
-    - name: create two files
-      ansible.builtin.file:
-        path: /var/www/nopCommerce/bin
         state: touch
         mode: '0777'    
     - name: change directory

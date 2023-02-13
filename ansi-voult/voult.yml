@@ -1,0 +1,8 @@
+---
+- name: specific information printing
+  hosts: all
+  become: yes
+  tasks:  
+    - name: print some information
+      ansible.builtin.debug:
+        msg: "password={{ password }} username={{ username }}""
