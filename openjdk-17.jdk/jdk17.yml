@@ -4,7 +4,7 @@
   become: yes
   tasks:
     - name: install openjdk-17-jdk
-      ansible-builtin.apt:
+      ansible.builtin.apt:
         name: openjdk-17-jdk
         update_cache: yes
         state: present
