@@ -1,0 +1,28 @@
+---
+- name: creating pipelines
+- hosts: all
+- become: yes
+- tasks:
+-   - name: installing necessary softwares
+-     ansible.builtin.apt:
+-       pkg:
+-       - openjdk-17-jdk
+-       - maven
+-       update_cache: yes
+-       state: present
+-   - name: getting code
+-     ansible.builtin.get_url:
+-       url: https://sai-22.s3.ap-south-1.amazonaws.com/spring-petclinic-3.0.0-SNAPSHOT.jar
+-       dest: /home/sai
+-       mode: '0777' 
+    - name: copying the service file
+      ansible.builtin.copy:
+        src: spc.service
+        dest: /etc/systemd/system/
+        mode: "0777"   
+    - name: start and daemon reload
+      ansible.builtin.systemd:
+        daemon_reload: yes
+        name: spc.service
+        state: restarted
+        
